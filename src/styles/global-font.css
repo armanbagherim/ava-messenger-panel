@@ -1,0 +1,182 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: IRANSansX;
+  font-style: normal;
+  font-weight: 100;
+  font-kerning: none;
+  src: url("./fonts/IRANSansX/IRANSansXFaNum-Thin.woff") format("woff"),
+    url("./fonts/IRANSansX/IRANSansXFaNum-Thin.woff2") format("woff2"),
+    url("./fonts/IRANSansX/IRANSansXFaNum-Thin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANSansX;
+  font-style: normal;
+  font-weight: 200;
+  font-kerning: none;
+  src: url("./fonts/IRANSansX/IRANSansXFaNum-UltraLight.woff") format("woff"),
+    url("./fonts/IRANSansX/IRANSansXFaNum-UltraLight.woff2") format("woff2"),
+    url("./fonts/IRANSansX/IRANSansXFaNum-UltraLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANSansX;
+  font-style: normal;
+  font-weight: 300;
+  font-kerning: none;
+  src: url("./fonts/IRANSansX/IRANSansXFaNum-Light.woff") format("woff"),
+    url("./fonts/IRANSansX/IRANSansXFaNum-Light.woff2") format("woff2"),
+    url("./fonts/IRANSansX/IRANSansXFaNum-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANSansX;
+  font-style: normal;
+  font-weight: 500;
+  font-kerning: none;
+  src: url("./fonts/IRANSansX/IRANSansXFaNum-Medium.woff") format("woff"),
+    url("./fonts/IRANSansX/IRANSansXFaNum-Medium.woff2") format("woff2"),
+    url("./fonts/IRANSansX/IRANSansXFaNum-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANSansX;
+  font-style: normal;
+  font-weight: 600;
+  font-kerning: none;
+  src: url("./fonts/IRANSansX/IRANSansXFaNum-DemiBold.woff") format("woff"),
+    url("./fonts/IRANSansX/IRANSansXFaNum-DemiBold.woff2") format("woff2"),
+    url("./fonts/IRANSansX/IRANSansXFaNum-DemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANSansX;
+  font-style: normal;
+  font-weight: 800;
+  font-kerning: none;
+  src: url("./fonts/IRANSansX/IRANSansXFaNum-ExtraBold.woff") format("woff"),
+    url("./fonts/IRANSansX/IRANSansXFaNum-ExtraBold.woff2") format("woff2"),
+    url("./fonts/IRANSansX/IRANSansXFaNum-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANSansX;
+  font-style: normal;
+  font-weight: 900;
+  font-kerning: none;
+  src: url("./fonts/IRANSansX/IRANSansXFaNum-Black.woff") format("woff"),
+    url("./fonts/IRANSansX/IRANSansXFaNum-Black.woff2") format("woff2"),
+    url("./fonts/IRANSansX/IRANSansXFaNum-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANSansX;
+  font-style: normal;
+  font-weight: bold;
+  font-kerning: none;
+  src: url("./fonts/IRANSansX/IRANSansXFaNum-Bold.woff") format("woff"),
+    url("./fonts/IRANSansX/IRANSansXFaNum-Bold.woff2") format("woff2"),
+    url("./fonts/IRANSansX/IRANSansXFaNum-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: IRANSansX;
+  font-style: normal;
+  font-weight: normal;
+  font-kerning: none;
+  src: url("./fonts/IRANSansX/IRANSansXFaNum-Regular.woff") format("woff"),
+    url("./fonts/IRANSansX/IRANSansXFaNum-Regular.woff2") format("woff2"),
+    url("./fonts/IRANSansX/IRANSansXFaNum-Regular.ttf") format("truetype");
+}
+
+
+
+* {
+  font-family: "IRANSansX" !important;
+}
+
+
+.layout {
+  direction: ltr !important;
+}
+
+.ra-input .MuiFormControlLabel-labelPlacementEnd {
+  margin-left: unset !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  gap: 10px !important;
+}
+
+.RaList-actions {
+  background: #ffffff;
+    margin: 10px 0;
+    border-radius: 15px;
+    padding: 2px 14px;
+    display: flex;
+    align-items: center;
+}
+
+.ltr-table {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+.ltr-table table,
+.ltr-table thead,
+.ltr-table tbody,
+.ltr-table tr,
+.ltr-table th,
+.ltr-table td {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+.ltr-table .MuiTableCell-root {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* RTL Table Styles */
+.rtl-table {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+.rtl-table table,
+.rtl-table thead,
+.rtl-table tbody,
+.rtl-table tr,
+.rtl-table th,
+.rtl-table td {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+.rtl-table .MuiTableCell-root {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+/* Target React Admin Datagrid specifically */
+.MuiPaper-root .MuiTable-root {
+  direction: rtl !important;
+}
+
+.MuiPaper-root .MuiTable-root thead,
+.MuiPaper-root .MuiTable-root tbody,
+.MuiPaper-root .MuiTable-root tr,
+.MuiPaper-root .MuiTable-root th,
+.MuiPaper-root .MuiTable-root td {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+.MuiTableCell-root {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+.MuiButtonBase-root {
+  direction: ltr !important;
+}

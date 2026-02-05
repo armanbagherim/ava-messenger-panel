@@ -1,0 +1,30 @@
+name: Create release tarball and attach to tag
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "20"
+      - run: yarn install --immutable
+      - run: yarn build
+      - run: |
+          version=`git describe --dirty --tags || echo unknown`
+          cp -r dist admin panel-$version
+          tar chvzf dist/admin panel-$version.tar.gz admin panel-$version
+      - uses: softprops/action-gh-release@5be0e66d93ac7ed76da52eca8bb058f665c3a5fe
+        with:
+          files: dist/*.tar.gz
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
