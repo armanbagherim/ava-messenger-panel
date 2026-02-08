@@ -409,25 +409,15 @@ const resourceMap = {
         preset: "private",
         visibility: "private",
         invite,
-        history_visibility: "shared",
         disable_encryption: true,
-        join_rules: "invite",
-        guest_access: "forbidden",
         room_version: "11",
-        creation_content: { "m.federate": true },
+        force_join: true,
         power_level_content_override: {
-          events_default: 0,
           state_default: 50,
+          events_default: 0,
           users_default: 0,
           users: currentUserId ? { [currentUserId]: 100 } : {},
         },
-        initial_state: [
-          {
-            type: "m.room.encryption",
-            state_key: "",
-            content: { algorithm: "m.megolm.v1.aes-sha2" },
-          },
-        ],
       };
 
       return {
@@ -472,28 +462,18 @@ const resourceMap = {
             : undefined;
 
       const defaultPayload: any = {
-        preset: "public_chat",
-        visibility: "public",
+        preset: "private",
+        visibility: "private",
         invite,
-        history_visibility: "world_readable",
-        join_rules: "public",
         disable_encryption: true,
-        guest_access: "can_join",
         room_version: "11",
-        creation_content: { "m.federate": true },
+        force_join: true,
         power_level_content_override: {
-          events_default: 0,
           state_default: 50,
+          events_default: 50,
           users_default: 0,
           users: currentUserId ? { [currentUserId]: 100 } : {},
         },
-        initial_state: [
-          {
-            type: "m.room.encryption",
-            state_key: "",
-            content: { algorithm: "m.megolm.v1.aes-sha2" },
-          },
-        ],
       };
 
       return {
